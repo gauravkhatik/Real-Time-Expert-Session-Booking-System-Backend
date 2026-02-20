@@ -13,7 +13,6 @@ app.use(cors({
   credentials: true
 }));
 
-/* ================= MongoDB Serverless Connection ================= */
 
 let cached = global.mongoose;
 
@@ -39,7 +38,6 @@ app.use(async (req, res, next) => {
   next();
 });
 
-/* ================= Routes ================= */
 
 app.use("/api/experts", expertRoutes);
 app.use("/api/bookings", bookingRoutes);
