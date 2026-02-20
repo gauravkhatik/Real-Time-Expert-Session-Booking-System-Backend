@@ -9,10 +9,7 @@ const bookingRoutes = require("../routes/bookingRoutes");
 app.use(express.json());
 
 app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://real-time-expert-session-booking-sy-iota.vercel.app"
-  ],
+  origin: true,
   credentials: true
 }));
 
