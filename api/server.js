@@ -6,12 +6,10 @@ const mongoose = require("mongoose");
 const expertRoutes = require("../routes/expertRoutes");
 const bookingRoutes = require("../routes/bookingRoutes");
 
-app.use(express.json());
+const app = express();
 
-app.use(cors({
-  origin: true,
-  credentials: true
-}));
+app.use(express.json());
+app.use(cors({ origin: process.env.FRONTEND_ORIGIN || "*" }));
 
 /* ================= MongoDB Serverless Connection ================= */
 
