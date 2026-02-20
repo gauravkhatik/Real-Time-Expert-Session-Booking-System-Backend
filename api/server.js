@@ -8,8 +8,10 @@ const bookingRoutes = require("../routes/bookingRoutes");
 
 const app = express();
 
-app.use(express.json());
-app.use(cors({ origin: process.env.FRONTEND_ORIGIN || "*" }));
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
 
 /* ================= MongoDB Serverless Connection ================= */
 
