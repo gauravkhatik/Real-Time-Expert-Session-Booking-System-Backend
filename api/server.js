@@ -6,10 +6,15 @@ const mongoose = require("mongoose");
 const expertRoutes = require("../routes/expertRoutes");
 const bookingRoutes = require("../routes/bookingRoutes");
 
-const app = express();
-
 app.use(express.json());
-app.use(cors({ origin: process.env.FRONTEND_ORIGIN || "*" }));
+
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://real-time-expert-session-booking-sy-iota.vercel.app"
+  ],
+  credentials: true
+}));
 
 /* ================= MongoDB Serverless Connection ================= */
 
