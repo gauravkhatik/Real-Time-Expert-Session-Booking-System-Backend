@@ -18,7 +18,7 @@ const experts = [
 ];
 
 async function seed() {
-  await mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/rtes_booking');
+  await mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://gauravkhatik806_db_user:ldJ71dfghLcyy2W9@cluster0.xwaoi5k.mongodb.net/');
   await Expert.deleteMany({});
   await Expert.insertMany(experts);
   console.log('Seeded experts');
